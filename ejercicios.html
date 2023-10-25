@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJERCICIOS</title>
+</head>
+<body>
+    
+    <script>
+        /* Ejercicio 1
+
+        1) Programa una función que cuente el número de caracteres de una cadena de texto,
+        pe. miFunción("Hola Mundo") devolverá 10.*/
+        
+        const objeto = {
+            nombre: "Gilberto",
+            apellido: "Valenzuela"
+        }
+        const arreglo = [0,1,2,3,4,5]
+
+        const cadena = "Hola mundo"
+        let numero = 5312
+
+        const contar = c =>{ 
+            //Utilizamos el operador ternario para realizar la validación de tipos de datos. MENOS LEGIBLE
+            // console.log((typeof c === "object") ? Object.keys(c).length : (typeof c === "number") ? c.toString().length : c.length )
+            if(typeof c === "object") {
+                console.log(`Tu dato es un arreglo/objeto y su tamaño es: ${Object.keys(c).length}`)
+            }else if(typeof c === "number") {
+                console.log(`Tu dato es un numérico y su tamaño es: ${c.toString.length}`)
+            }else {
+                console.log(`Tu dato es un string y su tamaño es: ${c.length}`)
+            }
+        }
+
+        contar(numero)
+
+
+        
+
+    </script>
+</body>
+</html>
