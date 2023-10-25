@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+</head>
+<body>
+    
+    <script>
+        //2) Programa una función que te devuelva el texto recortado según el número de caracteres indicados, 
+        //pe. miFunción("Hola Mundo", 4) devolverá "Hola".
+        let palabra = "Hola Mundo"
+        const recorte = (cadena, corte) => {
+            //utilizamos el método substring que substrae un string dentro de otro según 2 parámetros: el index inicial y el index final. 
+            console.log(cadena.substring(0,corte))
+        }
+        
+        recorte(palabra, 4)
+    </script>
+</body>
+</html>
