@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //Programa una función que dada una String te devuelva un Array de textos separados por cierto carácter, 
+        //pe. miFunción('hola que tal', ' ') devolverá ['hola', 'que', 'tal'].
+        let str = "HOLA MI NOMBRE ES GILBERTO"
+        const cadenaArray = (cadena, separar) => {
+            //utilizamos el método split que recibe como parámetro lo que dividirá el texto para retornar un arreglo
+            return cadena.split(separar)
+            
+        }
+        console.log(cadenaArray(str," "))
+    </script>
+</body>
+</html>
