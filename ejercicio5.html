@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+</head>
+<body>
+    
+    <script>
+
+        //5) Programa una función que invierta las palabras de una cadena de texto, 
+        //pe. miFunción("Hola Mundo") devolverá "odnuM aloH"
+        const invertirCadena = (texto = "") => {
+                let inverso = ""
+
+                if(!texto) return console.log("INGRESA UN TEXTO")
+                
+                
+                for(let i=texto.length-1; i>=0 ;i--) {
+                    inverso += texto[i]
+                }
+                console.log(inverso)
+            }
+        
+            invertirCadena("HOLA");
+            </script>
+</body>
+</html>
