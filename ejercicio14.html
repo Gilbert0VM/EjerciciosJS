@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 14</title>
+</head>
+<body>
+    <script>
+       // 14) Programa una función para convertir grados Celsius a Fahrenheit y viceversa, pe. miFuncion(0,"C") devolverá 32°F.
+        const convertir = (cantidad, grados = "") => {
+            grados = grados.toLowerCase()
+            if(typeof cantidad !== "number") return "ingresa un valor numérico como cantidad de grados"
+            if(cantidad === null) return "Ingresa la cantidad"
+            if(!grados) return "ingresa la unidad de medida (C o F)"
+            if(typeof grados !== "string") return "ingrese un string como unidad"
+            
+            let gF = "f", gC = "c"
+
+            if (grados !== gF && grados !== gC) return "Ingresa una unidad válida (F o C)"
+        
+
+            let resultado = (grados === gC) 
+                ? (cantidad-32) * 5/9
+                : (cantidad*9/5) + 32
+            return resultado
+        }
+
+        console.log(convertir(0,"c"))
+    </script>
+</body>
+</html>

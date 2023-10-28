@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 13</title>
+</head>
+<body>
+    <script>
+        //13) Programa una función que determine si un número es par o impar, pe. miFuncion(29) devolverá Impar.
+
+        const esPar = (n=0) => {
+            if(typeof n !== "number") return console.warn("Ingresa un valor numérico")
+            if(!n) return console.warn("Ingresa un número")
+            if(n%1 !== 0) return console.warn("Ingresa un numero entero");
+
+            (n%2 !== 0) ? console.info("es impar") : console.info("es par")
+        }
+
+        esPar(1)
+        esPar(2)
+        esPar(3)
+        esPar(4)
+        esPar(5)
+    </script>
+</body>
+</html>

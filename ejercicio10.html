@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 10</title>
+</head>
+<body>
+        <script>
+            //10) Programa una función que reciba un número y evalúe si es capicúa o no (que se lee igual en un sentido que en otro), 
+            //pe. miFunción(2002) devolverá true.
+  
+            
+            const numeroCapicua = (n = 0) => {
+                if(!n) return "No ingresaste ningún valor"
+                if(n<1) return "Ingresa un numero positivo"
+                if(n%1 != 0) return "Ingresa un numero entero"
+                
+                let nReverso = reverso(n)
+
+                console.log((n.toString() === nReverso) ? "Es capicua": "no es capicua")
+                
+            }
+            
+            const reverso = (n = 0) => {
+                let nString = n.toString()
+                let nReverso = ""
+                for(i = nString.length -1; i>= 0; i--) {
+                    nReverso += nString[i]
+                }
+                return nReverso;
+            } 
+
+            console.log(numeroCapicua(2002))
+            
+        </script>
+</body>
+</html>
