@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 16</title>
+</head>
+<body>
+    <script>
+        //16) Programa una función que devuelva el monto final después de aplicar un descuento a una cantidad dada, 
+        //pe. miFuncion(1000, 20) devolverá 800.
+
+        const descuento = (precio = undefined, descuento = undefined) => {
+            if(precio === undefined) return console.warn("Ingresa un precio")
+            if(precio<=0) return console.error("Ingrese un precio real")
+            if(descuento<0) return console.error("Ingrese un descuento real")
+            if(descuento === undefined) return console.info(precio)
+
+            let resultado = precio*(descuento/100)
+            
+            return console.info(precio-resultado)
+            
+        }
+        descuento(1000,20)
+    </script>
+</body>
+</html>

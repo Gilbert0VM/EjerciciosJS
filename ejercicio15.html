@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 15</title>
+</head>
+<body>
+    <script>
+        //15) Programa una función para convertir números de base binaria a decimal y viceversa, 
+        //pe. miFuncion(100,2) devolverá 4 base 10.
+
+        const convertidor = (num = undefined, base = undefined) => {
+            if(num === undefined) return "Ingresa un numero a convertir"
+            if(base === undefined) return "Ingresa un numero de base"
+            if(typeof num !== "number") return "Ingresa un valor numérico"
+            if(typeof base !== "number") return "Ingresa el tipo de conversión en valor numérico (10 - base 10 y 2 base binaria)"
+            if(num <1) return "Ingresa un número positivo"
+            
+            num = Math.ceil(num)
+            
+            // return console.log(base, num)
+
+            if(base === 10) {
+
+                let residuo = 0, cociente = 0
+                let nBinario = []
+
+                while (num > 0) {
+                    if (num === 1) {
+                        nBinario.push(1); // Agregar el último dígito binario
+                        return parseInt(nBinario.reverse().join(""))
+                        break; // Salir del bucle
+                    }
+
+                    const cociente = num / 2;
+                    const residuo = num % 2;
+                    num = Math.trunc(cociente);
+                    nBinario.push(residuo);
+                }
+                
+            }else if (base === 2) {
+                
+                let base10 = 0, resultado;
+                num = num.toString()
+                num = num.split("").reverse()
+                // console.log(num, num.length)
+                for(let i=0;i<num.length;i++) {
+                    base10 += num[i]*(Math.pow(2,i))
+                    resultado = resultado+base10
+                }
+                return base10
+                
+            } 
+
+        }
+        console.log(convertidor(17,10))
+        console.log(convertidor(10,2))
+    </script>
+</body>
+</html>
